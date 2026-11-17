@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+}
+
+.box {
+    background: linear-gradient(135deg, #00a0c0, #006f8a);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+/* 1. Flexbox */
+.flex-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* 2. Grid */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    padding: 40px;
+}
+
+@media (max-width: 600px) {
+    .grid-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 3. Circle */
+.circle-wrapper {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ff7a59, #d94f2b);
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}

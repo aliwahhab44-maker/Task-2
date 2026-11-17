@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    background: #00a0c0;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.flex-section {
+    display: flex;
+    /* استخدام Flexbox */
+    gap: 20px;
+    /* مسافة بين الصناديق */
+    justify-content: center;
+    /* توسيط أفقي */
+    padding: 40px;
+}
+
+.grid-section {
+    display: grid;
+    /* استخدام Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 أعمدة متساوية */
+    grid-template-rows: repeat(2, auto);
+    /* صفّان */
+    gap: 20px;
+    /* مسافة بين العناصر */
+    padding: 40px;
+}
+
+/* استجابة للموبايل: عمود واحد */
+@media (max-width: 600px) {
+    .grid-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.circle-wrapper {
+    display: flex;
+    justify-content: center;
+    /* توسيط أفقي */
+    align-items: center;
+    /* توسيط عمودي */
+    height: 100vh;
+    /* ارتفاع = كامل الشاشة */
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background: #00a0c0;
+    border-radius: 50%;
+    /* يحوّل المربع إلى دائرة */
+}
